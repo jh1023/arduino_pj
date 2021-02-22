@@ -1,0 +1,40 @@
+<html>
+  <head>
+    아직 완성되지 않음
+    월별 데이터 그래프 
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable({{values|safe}});
+
+        var options = {
+          title: {{h_title|safe}} +' vs '+ {{v_title|safe}},
+          hAxis: {title: {{h_title|safe}}},
+          vAxis: {title: {{v_title|safe}}},
+          legend: 'none'
+        };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+        
+        chart.draw(data, options);
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+  </body>
+  <!--Reference : https://developers.google.com/chart/interactive/docs/quick_start-->
+</html>
+
+<!--{{values|safe}} -->

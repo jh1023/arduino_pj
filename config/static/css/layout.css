@@ -1,0 +1,126 @@
+.content-box{
+    width: 100%;
+    height: inherit;
+    background-color: #ff000040;
+    margin: auto;
+}
+.hidden{
+    display: none;
+}
+
+/*----------------------------------------------------------------------------*/
+#header{
+    height: 100px;
+    width: auto;
+}
+    #header > .content-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-menu{
+        width: 50%;
+        
+
+        display: flex;
+        align-items: left;
+        justify-content: center;
+    }
+    #main-menu > nav > ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        --background-color: gray;
+    }
+    #main-menu > nav > ul > li{
+        margin: 0px 10px;
+    }
+
+
+    #member-menu{
+        width: 50%;
+
+    }
+
+        #member-menu>nav:nth-child(1)>ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*background-color: gray;*/
+            margin-bottom: 10px;
+        }
+        #member-menu>nav:nth-child(1)>ul>li{
+            margin:0px 15px;
+        }
+
+        #member-menu>nav:nth-child(2)>ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*background-color: gray;*/
+            margin-bottom: 10px;
+        }
+        #member-menu>nav:nth-child(2)>ul>li{
+            margin:0px 15px;
+        }
+
+/*----------------------------------------------------------------------------*/
+
+#body{
+    height: 100%;
+    margin: 5px;
+}
+    #body > .content-box{
+        display: flex;
+    }
+        #aside{
+            width: 50%;
+            position: relative;
+            height: inherit;/*inherit부모속성을 상속받음*/
+            background-color:blanchedalmond;
+        }
+
+            #body_nav{
+                width: 100%;
+                height: 50%;
+                margin: auto;
+                background-color: floralwhite;
+            }
+            #body_nav>nav>h1{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 30px 0px 10px 0px;
+            }
+
+            #body_nav>nav>ul{
+                --list-style-type:circle;
+                --padding: 20px;
+                margin: 0px 0px 0px 0px;
+            }
+            #body_nav> nav> ul li{
+                margin:0px 20px
+            }
+            #row_nav{
+                width: 100%;
+                height: 50%;
+                position: absolute;
+                margin: auto;
+                background-color: aqua;
+            }
+
+/*----------------------------------------------------------------------------*/
+
+        #main{
+            width: 50%;
+            height: 100%;
+            background-color: burlywood;
+        }
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
